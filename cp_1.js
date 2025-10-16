@@ -3,6 +3,7 @@ const userText = document.getElementById("user-name")
 const emailText = document.getElementById("email")
 const commentText = document.getElementById("comments")
 const countCharacters = document.getElementById("count-characters")
+const submit = document.getElementById("submit")
 
 
 //Step 3 creating event listeners
@@ -12,13 +13,45 @@ commentText.addEventListener("input", function() {
     countCharacters.textContent = commentText.value.length
 })
 
- //mouseover tooltip(user section)
- userText.addEventListener("mouseover", function(){ // we  defined the user section as userText above
+ //mouseover tooltip
+ //user section
+userText.addEventListener("mouseover", function(){ // we  defined the user section as userText above
   document.getElementById("user-name-tip").style.display ="block"
  })
-userText.addEventListener("mouseout", function(){
+    userText.addEventListener("mouseout", function(){
     document.getElementById("user-name-tip").style.display="none"
 })
+
+//email section
+ emailText.addEventListener("mouseover", function(){ 
+  document.getElementById("email-tip").style.display ="block"
+ })
+emailText.addEventListener("mouseout", function(){
+    document.getElementById("email-tip").style.display="none"
+})
+
+//comments section
+ commentText.addEventListener("mouseover", function(){ 
+  document.getElementById("comment-tip").style.display ="block"
+ })
+commentText.addEventListener("mouseout", function(){
+    document.getElementById("comment-tip").style.display="none"
+})
+
+
+//preventing submission if fields are empty
+//used an if else statement with an alert
+submit.addEventListener("click", function(event){
+    if (userText.value ===""){
+        alert("enter user name")
+    }else if(emailText.value ===""){
+        alert("enter email")
+    }else if (commentText.value ===""){
+        alert("add a comment")
+    }else{
+        alert("Submitted")
+    }})
+
 
 
  //creating a feedback display
