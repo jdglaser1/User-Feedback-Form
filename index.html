@@ -18,6 +18,7 @@
 
         <p>Please enter your user name below</p>
         <input type ="text" name="userName" id="user-name">
+        <p id = "user-name-tip" style="display:none">Enter your user name.</p>
    
 
         <p>Please enter your email below</p>
@@ -25,9 +26,16 @@
 
         <p>Please enter any comments below</p>
         <textarea type ="text" name="comments" id="comments"></textarea><br>
+        
+        <!-- Here I am adding the section that gives the live feedback -->
+        <p id="count-characters">0 characters</p>
 
         <button id="Submit">Submit</button>
 
-    
+        
+        <div id="feedback-display"></div>
+
+
+    <script src="cp_1.js"></script>
 </body>
 </html>
