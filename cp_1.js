@@ -17,7 +17,7 @@ commentText.addEventListener("input", function() {
 
  //mouseover tooltip
  //user section
-userText.addEventListener("mouseover", function(){ // we  defined the user section as userText above
+userText.addEventListener("mouseover", function(){ 
   document.getElementById("user-name-tip").style.display ="block"
  })
     userText.addEventListener("mouseout", function(){
@@ -46,7 +46,7 @@ commentText.addEventListener("mouseout", function(){
 submit.addEventListener("click", function(event){
     event.preventDefault()
     if (userText.value ===""){
-        alert("enter user name")
+        alert("enter username")
     }else if(emailText.value ===""){
         alert("enter email")
     }else if (commentText.value ===""){
