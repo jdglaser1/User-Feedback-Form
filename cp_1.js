@@ -4,6 +4,8 @@ const emailText = document.getElementById("email")
 const commentText = document.getElementById("comments")
 const countCharacters = document.getElementById("count-characters")
 const submit = document.getElementById("submit")
+const feedbackDisplay = document.getElementById("feedback-display")
+
 
 
 //Step 3 creating event listeners
@@ -42,6 +44,7 @@ commentText.addEventListener("mouseout", function(){
 //preventing submission if fields are empty
 //used an if else statement with an alert
 submit.addEventListener("click", function(event){
+    event.preventDefault()
     if (userText.value ===""){
         alert("enter user name")
     }else if(emailText.value ===""){
@@ -50,11 +53,16 @@ submit.addEventListener("click", function(event){
         alert("add a comment")
     }else{
         alert("Submitted")
+        // alerts submitted if all entries are valid
+        //Appending entries to the feedback display div in the if else statement so that it only apppends if the entries are valid  
+        
+        // This part creates the new <p> tag for returning feedback
+        const feedback = document.createElement("p")
+        feedback.textContent ="username: " + userText.value + "     email: " + emailText.value + "     comments: " + commentText.value
+       
+       //this part appends it to show to the user
+        feedbackDisplay.appendChild(feedback)
+
     }})
 
 
-
- //creating a feedback display
-
-
-// Be sure to add event.preventDefault()
