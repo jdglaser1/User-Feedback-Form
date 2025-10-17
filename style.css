@@ -1,5 +1,5 @@
 :root {
-    --usf-green: #006747;
+    --usf-green: #0099ff;
     --usf-gold: #FDBB30;
     --white: #FFFFFF;
     --text-dark: #333333;
@@ -16,7 +16,17 @@
     text-align: center;
 
   }
-  
+
+.tt {
+  background-color: var(--usf-green); 
+  color: var(--white);           
+  padding: 6px 10px;            
+  border-radius: 6px;           
+  font-size: 0.9rem;             
+  text-align: center;
+}
+
+
   header {
     background-color: var(--usf-green);
     color: var(--white);
@@ -25,16 +35,3 @@
   }
   
 
-  
-  h2 {
-    color: var(--usf-green);
-    border-bottom: 2px solid var(--usf-gold);
-    padding-bottom: 0.3rem;
-  }
-  
-
-  a:hover {
-    color: var(--link-hover);
-    text-decoration: underline;
-  }
-  
