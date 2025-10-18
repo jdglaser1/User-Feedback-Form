@@ -45,12 +45,8 @@ commentText.addEventListener("mouseout", function(){
 //used an if else statement with an alert
 submit.addEventListener("click", function(event){
     event.preventDefault()
-    if (userText.value ===""){
-        alert("enter username")
-    }else if(emailText.value ===""){
-        alert("enter email")
-    }else if (commentText.value ===""){
-        alert("add a comment")
+    if (userText.value ==="" || emailText.value ==="" || commentText.value ===""){
+        alert("Enter all required fields")
     }else{
         alert("Submitted")
         // alerts submitted if all entries are valid
